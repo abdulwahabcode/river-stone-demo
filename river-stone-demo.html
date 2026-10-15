@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>River Stone | Handyman — Tahlequah, OK</title>
+<meta name="description" content="River Stone — rugged, reliable handyman serving Tahlequah, Muskogee & Cookson OK. Repairs, decks, storm damage, cleanouts. Call 888-855-2170.">
+<style>
+  :root{
+    --rock:#1E2224; --rock2:#262B2E; --stone:#4A5157; --slate:#6B7378;
+    --teal:#527A76; --teal-d:#3E5F5C; --foam:#EDF0F1; --clay:#A9714B; --clay-d:#8A5A38;
+    --ink:#23282B;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--foam);overflow-x:hidden;line-height:1.6}
+  .label{font-size:.72rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  /* NAV */
+  nav{position:sticky;top:0;z-index:50;background:var(--rock);border-bottom:3px solid var(--teal)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:11px;padding-bottom:11px}
+  .brand{display:flex;align-items:center;gap:10px;color:var(--foam);text-decoration:none;font-weight:800;font-size:1.1rem;letter-spacing:.04em}
+  .navlinks{display:flex;gap:20px;align-items:center}
+  .navlinks a{color:var(--foam);text-decoration:none;font-size:.86rem;font-weight:600}
+  .navlinks a:hover{color:var(--clay)}
+  .nav-cta{background:var(--clay);color:#fff!important;padding:9px 20px;font-weight:800}
+  .nav-cta:hover{background:var(--clay-d)}
+  @media(max-width:640px){.navlinks a:not(.nav-cta){display:none}}
+  /* HERO with topo contours */
+  .hero{background:linear-gradient(180deg,var(--rock) 0%,var(--rock2) 100%);color:var(--foam);position:relative;overflow:hidden}
+  .topo{position:absolute;inset:0;opacity:.5;pointer-events:none}
+  .hero .wrap{position:relative;padding:88px 20px 72px}
+  .trail-sign{display:inline-block;background:var(--stone);border:2px solid var(--slate);color:var(--foam);padding:10px 26px;font-weight:800;letter-spacing:.14em;font-size:.82rem;text-transform:uppercase;transform:rotate(-1.2deg);box-shadow:5px 5px 0 rgba(0,0,0,.35);margin-bottom:24px}
+  .hero h1{font-size:clamp(2.6rem,7vw,4.4rem);font-weight:900;letter-spacing:-.01em;line-height:1.02;margin-bottom:14px}
+  .hero h1 span{color:var(--teal)}
+  .hero .lede{color:#B9C2C6;font-size:clamp(1rem,2.4vw,1.2rem);max-width:32rem;margin-bottom:30px}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:16px 32px;font-weight:800;text-decoration:none;font-size:1rem;min-height:54px}
+  .btn-clay{background:var(--clay);color:#fff;box-shadow:5px 5px 0 rgba(0,0,0,.35)}
+  .btn-clay:hover{background:var(--clay-d)}
+  .btn-ghost{border:2px solid var(--slate);color:var(--foam)}
+  .btn-ghost:hover{border-color:var(--clay);color:var(--clay)}
+  .coords{margin-top:34px;color:var(--slate);font-size:.8rem;letter-spacing:.18em}
+  /* SERVICES — stone blocks */
+  .work{background:var(--foam);padding:76px 0}
+  .eyebrow{color:var(--teal-d);margin-bottom:10px}
+  h2.sec{font-size:clamp(1.9rem,4.5vw,2.7rem);font-weight:900;letter-spacing:-.01em;margin-bottom:10px;color:var(--rock)}
+  .sec-sub{color:var(--slate);max-width:36rem;margin-bottom:38px}
+  .block-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  @media(max-width:820px){.block-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:540px){.block-grid{grid-template-columns:1fr}}
+  .block{background:#fff;border:2px solid var(--rock);box-shadow:7px 7px 0 var(--stone);padding:28px 24px;position:relative}
+  .block .num{position:absolute;top:14px;right:16px;font-weight:900;font-size:.8rem;color:var(--slate);letter-spacing:.1em}
+  .block .bar{width:44px;height:6px;background:var(--teal);margin-bottom:16px}
+  .block h3{font-size:1.15rem;font-weight:800;margin-bottom:8px;color:var(--rock)}
+  .block p{font-size:.92rem;color:var(--slate)}
+  /* WHY — dark */
+  .why{background:var(--rock2);color:var(--foam);padding:76px 0;position:relative;overflow:hidden}
+  .why h2.sec{color:var(--foam)}
+  .why .sec-sub{color:#9AA4A9}
+  .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  @media(max-width:680px){.why-grid{grid-template-columns:1fr}}
+  .why-card{background:var(--rock);border-left:6px solid var(--clay);padding:26px 24px}
+  .why-card h3{font-size:1.1rem;font-weight:800;margin-bottom:6px;color:var(--foam)}
+  .why-card p{font-size:.93rem;color:#9AA4A9}
+  /* AREA */
+  .area{background:var(--foam);padding:76px 0}
+  .route{display:flex;align-items:center;gap:0;flex-wrap:wrap;margin-top:10px}
+  .stop{background:var(--rock);color:var(--foam);padding:16px 28px;font-weight:800;letter-spacing:.06em;position:relative}
+  .stop.main{background:var(--teal-d)}
+  .dash{width:34px;height:4px;background:var(--clay)}
+  @media(max-width:560px){.dash{display:none}.stop{margin:6px 6px 6px 0}}
+  /* CONTACT */
+  .contact{background:var(--rock);color:var(--foam);padding:84px 0;text-align:center;border-top:6px solid var(--teal)}
+  .contact h2.sec{color:var(--foam)}
+  .contact p{color:#9AA4A9;max-width:30rem;margin:0 auto 26px}
+  .big-phone{font-size:clamp(2rem,6vw,3rem);font-weight:900;color:var(--clay);text-decoration:none;display:block;margin-bottom:24px;letter-spacing:.02em}
+  .big-phone:hover{color:var(--foam)}
+  footer{background:#141719;color:#6B7378;padding:30px 0;font-size:.85rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}
+  footer a{color:var(--clay);text-decoration:none}
+  .credit{font-size:.78rem;color:#4A5157}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M4 22 12 8l6 8 4-5 4 11H4z" fill="#527A76"/><path d="M4 22h22" stroke="#A9714B" stroke-width="2.5"/></svg>
+      RIVER&nbsp;STONE
+    </a>
+    <div class="navlinks">
+      <a href="#work">Work</a>
+      <a href="#why">Why Us</a>
+      <a href="#area">Territory</a>
+      <a href="#contact" class="nav-cta">GET IT FIXED</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="topo" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice">
+    <g fill="none" stroke="#527A76" stroke-width="1.4" opacity=".55">
+      <path d="M-20,120 C200,60 400,180 620,120 C840,60 1040,160 1220,100"/>
+      <path d="M-20,180 C200,120 400,240 620,180 C840,120 1040,220 1220,160"/>
+      <path d="M-20,240 C200,180 400,300 620,240 C840,180 1040,280 1220,220"/>
+      <path d="M-20,300 C200,240 400,360 620,300 C840,240 1040,340 1220,280"/>
+      <path d="M-20,360 C200,300 400,420 620,360 C840,300 1040,400 1220,340"/>
+      <path d="M-20,420 C200,360 400,480 620,420 C840,360 1040,460 1220,400"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <div class="trail-sign">▲ Tahlequah · Oklahoma</div>
+    <h1>BUILT TOUGH.<br><span>FIXED RIGHT.</span></h1>
+    <p class="lede">River Stone is Green Country's no-nonsense handyman crew. Storm damage, worn-out decks, punch lists a mile long — we roll up and get it handled.</p>
+    <div class="cta-row">
+      <a class="btn btn-clay" href="tel:+18888552170">CALL 888-855-2170</a>
+      <a class="btn btn-ghost" href="mailto:riverstoneba1@gmail.com">Email Us</a>
+    </div>
+    <div class="coords label">35.9154° N · 94.9699° W — GREEN COUNTRY, OK</div>
+  </div>
+</header>
+
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="eyebrow label">Field work</div>
+    <h2 class="sec">What we take on</h2>
+    <p class="sec-sub">If it's broken, beat-up, or half-finished — it's our kind of job.</p>
+    <div class="block-grid">
+      <div class="block"><span class="num">/01</span><div class="bar"></div><h3>General Home Repairs</h3><p>Drywall, trim, doors, siding — the everyday wear and tear, handled in one visit when we can.</p></div>
+      <div class="block"><span class="num">/02</span><div class="bar"></div><h3>Storm &amp; Wind Damage</h3><p>Oklahoma weather hits hard. We board up, patch, and rebuild after the storm passes.</p></div>
+      <div class="block"><span class="num">/03</span><div class="bar"></div><h3>Decks &amp; Fences</h3><p>New builds, re-decking, post replacement, and gates that actually latch.</p></div>
+      <div class="block"><span class="num">/04</span><div class="bar"></div><h3>Drywall &amp; Paint</h3><p>Patches that disappear, crisp lines, and paint that holds up to real life.</p></div>
+      <div class="block"><span class="num">/05</span><div class="bar"></div><h3>Property Cleanouts</h3><p>Garages, sheds, and rental units cleared out and hauled off — fast.</p></div>
+      <div class="block"><span class="num">/06</span><div class="bar"></div><h3>Rental Turnovers</h3><p>Landlords: punch-list repairs between tenants so units rent faster.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="eyebrow label" style="color:var(--clay)">Why River Stone</div>
+    <h2 class="sec">Straight talk. Solid work.</h2>
+    <p class="sec-sub">No sales pitch, no disappearing act. Here's the deal:</p>
+    <div class="why-grid">
+      <div class="why-card"><h3>We show up when we say</h3><p>Your time matters. If we're running late, you'll hear it from us first — not wonder.</p></div>
+      <div class="why-card"><h3>Priced before we start</h3><p>Clear quote up front. The number we shake on is the number on the invoice.</p></div>
+      <div class="why-card"><h3>Built for Oklahoma</h3><p>Materials and methods chosen for heat, hail, and humidity — not just looks.</p></div>
+      <div class="why-card"><h3>One crew, start to finish</h3><p>The people who quote your job are the people who do your job.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="area" id="area">
+  <div class="wrap">
+    <div class="eyebrow label">Territory</div>
+    <h2 class="sec">Running routes across Green Country</h2>
+    <p class="sec-sub">Home base in Tahlequah, rolling daily through:</p>
+    <div class="route">
+      <span class="stop main">TAHLEQUAH</span><span class="dash"></span>
+      <span class="stop">MUSKOGEE</span><span class="dash"></span>
+      <span class="stop">COOKSON</span><span class="dash"></span>
+      <span class="stop">FORT GIBSON</span>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="eyebrow label" style="color:var(--clay)">Make contact</div>
+    <h2 class="sec">Let's get it fixed.</h2>
+    <p>Call or email with what's broken — photos help. We'll tell you straight whether it's a quick fix or a bigger job.</p>
+    <a class="big-phone" href="tel:+18888552170">888-855-2170</a>
+    <div class="cta-row" style="justify-content:center">
+      <a class="btn btn-clay" href="mailto:riverstoneba1@gmail.com">riverstoneba1@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 River Stone · Tahlequah, OK · <a href="tel:+18888552170">888-855-2170</a></div>
+    <div class="credit">Demo website by Wahab Codes</div>
+  </div>
+</footer>
+
+</body>
+</html>
